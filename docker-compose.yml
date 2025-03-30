@@ -1,0 +1,68 @@
+# version: '3.8'
+
+# services:
+#   mysql:
+#     image: mysql:8.0
+#     container_name: mysql_container
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: dragonemperor
+#       MYSQL_DATABASE: retail_db
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: dragonemperor
+#     ports:
+#       - "3306:3306"
+#     volumes:
+#       - mysql_data:/var/lib/mysql
+
+#   app:
+#     build: .
+#     container_name: retail_app
+#     depends_on:
+#       - mysql
+#     environment:
+#       MYSQL_HOST: mysql  # ✅ Matches the update in `load.py`
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: dragonemperor
+#       MYSQL_DATABASE: retail_db
+#     volumes:
+#       - .:/app
+#     command: ["python", "scripts/load.py"]
+
+# volumes:
+#   mysql_data:
+
+
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dragonemperor
+      MYSQL_DATABASE: retail_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: dragonemperor
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: retail_app
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: dragonemperor
+      MYSQL_DATABASE: retail_db
+    volumes:
+      - .:/app
+    command: ["python", "scripts/load.py"]
+
+volumes:
+  mysql_data:

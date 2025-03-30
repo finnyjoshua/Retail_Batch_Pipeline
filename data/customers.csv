@@ -1,8 +1,6 @@
 customer_id,name,email,phone,address,country
-93810,Patrick Sanchez,jillrhodes@example.net,296-500-1338,"79402 Peterson Drives Apt. 511
-Davisstad, PA 35172",Sri Lanka
-15695,Kimberly Dudley,smiller@example.net,+1-659-931-0341x316,"55341 Amanda Gardens Apt. 764
-Lake Mark, WI 07832",Denmark
+93810,Patrick Sanchez,jillrhodes@example.net,296-500-1338,"79402 Peterson Drives Apt. 511 Davisstad, PA 35172",Sri Lanka
+15695,Kimberly Dudley,smiller@example.net,+1-659-931-0341x316,"55341 Amanda Gardens Apt. 764 Lake Mark, WI 07832",Denmark
 14207,Jennifer Jones,jason76@example.net,724.523.8849x696,"Unit 2871 Box 0122
 DPO AP 55834",Nepal
 18326,Kyle Mcdonald,tasha01@example.net,+1-645-414-6270,"489 Eric Track
